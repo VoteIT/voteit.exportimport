@@ -1,0 +1,76 @@
+# Swedish translations for voteit.core.
+# Copyright (C) 2011 ORGANIZATION
+# This file is distributed under the same license as the voteit.core
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: voteit.core 0.0\n"
+"POT-Creation-Date: 2011-11-03 21:12+0000\n"
+"PO-Revision-Date: 2011-09-28 14:00+0100\n"
+"Last-Translator: Fredrik Nilson <fredrik@betahaus.net>\n"
+"Language-Team: sv <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Generated-By: Babel 0.9.6\n"
+
+#: ./views.py:18
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: ./views.py:44
+msgid "Canceled"
+msgstr "Avbruten"
+
+#: ./views.py:79
+msgid "Created new objects from import"
+msgstr "Objekt skapade genom import"
+
+#: ./views.py:20
+msgid "Export and download"
+msgstr "Exportera och ladda ner"
+
+#: ./views.py:48
+msgid "Export current context"
+msgstr "Exportera nuvarande kontext"
+
+#: ./views.py:92
+msgid "Export this"
+msgstr "Exportera detta"
+
+#: ./views.py:33
+msgid "ExportImport component not included in VoteIT. You need to register it to use this."
+msgstr "Import/export-komponenten är inte inkluderad i VoteIT som standard. Du behöver registrera den för att använda detta."
+
+#: ./views.py:19
+msgid "Import"
+msgstr "Importera"
+
+#: ./views.py:87
+msgid "Import file to current context"
+msgstr "Importera fil till aktuell kontext"
+
+#: ./views.py:93
+msgid "Import here"
+msgstr "Importera här"
+
+#: ./schemas.py:29
+msgid "Lowercase, numbers or hyphen is ok."
+msgstr "Gemensa, siffror eller bindestreck är tillåtna."
+
+#: ./schemas.py:28
+msgid "Name, will be part of the url"
+msgstr "Namn, blir en del av URLn"
+
+#: ./schemas.py:33
+msgid "Upload ZEXP file."
+msgstr "Ladda upp ZEXP fil."
+

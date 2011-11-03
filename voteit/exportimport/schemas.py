@@ -30,5 +30,6 @@ class ImportSchema(colander.Schema):
                                validator = colander.Regex(IMPORT_NAME_REGEXP),)
     upload = colander.SchemaNode(
         deform.FileData(),
+        title = _(u"Upload ZEXP file."),
         widget=deform.widget.FileUploadWidget(tmpstore)
     )

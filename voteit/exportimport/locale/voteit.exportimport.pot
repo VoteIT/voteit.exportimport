@@ -1,0 +1,71 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2011-11-03 21:12+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: voteit.exportimport\n"
+
+#: ./views.py:18
+msgid "Cancel"
+msgstr ""
+
+#: ./views.py:44
+msgid "Canceled"
+msgstr ""
+
+#: ./views.py:79
+msgid "Created new objects from import"
+msgstr ""
+
+#: ./views.py:20
+msgid "Export and download"
+msgstr ""
+
+#: ./views.py:48
+msgid "Export current context"
+msgstr ""
+
+#: ./views.py:92
+msgid "Export this"
+msgstr ""
+
+#: ./views.py:33
+msgid "ExportImport component not included in VoteIT. You need to register it to use this."
+msgstr ""
+
+#: ./views.py:19
+msgid "Import"
+msgstr ""
+
+#: ./views.py:87
+msgid "Import file to current context"
+msgstr ""
+
+#: ./views.py:93
+msgid "Import here"
+msgstr ""
+
+#: ./schemas.py:29
+msgid "Lowercase, numbers or hyphen is ok."
+msgstr ""
+
+#: ./schemas.py:28
+msgid "Name, will be part of the url"
+msgstr ""
+
+#: ./schemas.py:33
+msgid "Upload ZEXP file."
+msgstr ""
+

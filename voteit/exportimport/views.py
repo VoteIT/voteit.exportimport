@@ -6,14 +6,18 @@ from pyramid.view import view_config
 from pyramid.url import resource_url
 from pyramid.security import has_permission
 from betahaus.pyracont.factories import createSchema
+from betahaus.viewcomponent.decorators import view_action
 from voteit.core.views.base_view import BaseView
 from voteit.core.models.interfaces import IBaseContent
 from voteit.core.security import MANAGE_SERVER
-from voteit.core.models.schemas import button_cancel
-from voteit.core.models.schemas import button_download
-from voteit.core.models.schemas import button_save
 
 from voteit.exportimport.interfaces import IExportImport
+from voteit.exportimport import ExportImportMF as _
+
+
+button_cancel = deform.Button('cancel', _(u"Cancel"))
+button_import = deform.Button('import', _(u"Import"))
+button_export = deform.Button('export', _(u"Export and download"))
 
 
 class ExportImportView(BaseView):
@@ -30,10 +34,10 @@ class ExportImportView(BaseView):
             self.api.flash_messages.add(msg, type = 'error')
             return HTTPFound(location=redirect_url)
 
-        form = deform.Form(colander.Schema(), buttons=(button_download, button_cancel))
+        form = deform.Form(colander.Schema(), buttons=(button_export, button_cancel))
         self.api.register_form_resources(form)
 
-        if 'download' in self.request.POST:
+        if 'export' in self.request.POST:
             return export_import.download_export(self.context)
         
         if 'cancel' in self.request.POST:
@@ -57,10 +61,10 @@ class ExportImportView(BaseView):
             self.api.flash_messages.add(msg, type = 'error')
             return HTTPFound(location=redirect_url)
         schema = createSchema('ImportSchema').bind(context = self.context, request = self.request)
-        form = deform.Form(schema, buttons=(button_save, button_cancel))
+        form = deform.Form(schema, buttons=(button_import, button_cancel))
         self.api.register_form_resources(form)
 
-        if 'save' in self.request.POST:
+        if 'import' in self.request.POST:
             controls = self.request.params.items()
             try:
                 appstruct = form.validate(controls)
@@ -84,3 +88,12 @@ class ExportImportView(BaseView):
         self.api.flash_messages.add(msg, close_button=False)
         self.response['form'] = form.render()
         return self.response
+
+@view_action('context_actions', 'export', title = _(u"Export this"), viewname = '_export')
+@view_action('context_actions', 'import', title = _(u"Import here"), viewname = '_import')
+def exportimport_context_action(context, request, va, **kw):
+    api = kw['api']
+    if not api.context_has_permission(MANAGE_SERVER, api.root):
+        return ''
+    url = "%s%s" % (api.resource_url(context, request), va.kwargs['viewname'])
+    return """<li><a href="%s">%s</a></li>""" % (url, api.translate(va.title))
