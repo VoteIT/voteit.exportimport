@@ -19,7 +19,7 @@ requires = (
     )
 
 
-setup(name='voteit.',
+setup(name='voteit.exportimport',
       version='0.1',
       description='VoteIT exports and imports',
       long_description=README + '\n\n' +  CHANGES,
