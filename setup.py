@@ -20,7 +20,7 @@ requires = (
 
 
 setup(name='voteit.exportimport',
-      version='0.1',
+      version='0.1dev',
       description='VoteIT exports and imports',
       long_description=README + '\n\n' +  CHANGES,
       classifiers=[
