@@ -7,14 +7,13 @@ README = open(os.path.join(here, 'README.rst')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.rst')).read()
 
 requires = (
-    'pyramid>=1.2',
-    'pyramid_debugtoolbar', #Won't be active unless included
+    'pyramid',
     'voteit.core',
     'betahaus.pyracont',
     'betahaus.viewcomponent',
     'lingua',
     'Babel',
-    'colander==0.9.5',
+    'colander',
     'deform',
     )
 
@@ -41,7 +40,6 @@ setup(name='voteit.exportimport',
       test_suite="voteit.exportimport",
       entry_points = """\
       """,
-      paster_plugins=['pyramid'],
       message_extractors = { '.': [
               ('**.py',   'lingua_python', None ),
               ('**.pt',   'lingua_xml', None ),
